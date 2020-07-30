@@ -1,0 +1,32 @@
+<html lang="en">
+{% load static %}
+{% load crispy_forms_tags %}
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/register.css'%}">
+</head>
+<style>
+    h2 {
+  color:#ff9900;
+  align="center"
+}
+</style>
+    <body>
+    <div class="container">
+            <div class="jumbotron" align="left">
+                <div class="container">
+            <h2>User Register Here !!!</h2>
+                    <br>
+        <form action="/userapp/user_reg/" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ureg|crispy}}<br>
+            <button type="submit" class="btn btn-success">Submit</button>      
+
+        </form>
+    </div>
+</div>
+  </div>
+    </body>
+</html>

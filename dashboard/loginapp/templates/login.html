@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{% load crispy_forms_tags %}
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/login.css'%}">
+</head>
+
+<body>
+    <div class="container">
+<div class="jumbotron" align="center">
+    <div class="container">
+        <h2 > Admin Login Here !!!!</h2><br>
+<form action="" method="post">
+    {% csrf_token %}
+    {{form|crispy}}
+    <br><br>
+    <button type="submit" class="btn btn-success">Loginn</button>
+</form>
+<!--        <a  >Login</a>&nbsp;&nbsp;&nbsp;&nbsp;-->
+    </div>
+</div>
+    </div>
+</body>
+</html>

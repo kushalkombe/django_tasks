@@ -1,0 +1,5 @@
+ #f=StudentRegistrationform()
+        # obj.sname=request.POST['sname']
+        # obj.smarks=request.POST['smarks']
+        # obj.saddr=request.POST['saddr']
+        # obj.save()

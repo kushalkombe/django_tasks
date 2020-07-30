@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="2">
+    <thead>
+    <th>student rollno </th>
+    <th>student name </th>
+    <th> marks</th>
+    <th>address </th>
+    </thead>
+    {%for x in s%}
+    <tr>
+        <td>{{x.srollno}}</td>
+        <td>  {{x.sname}}</td>
+        <td>  {{x.smarks}}</td>
+        <td>  {{x.saddr}}</td>
+        <td><button type="submit"><a href="/delete/{{x.id}}/">delete</a> </button></td>
+        <td><button type="submit"><a href="/update/{{x.id}}/">update</a> </button></td>
+    </tr>
+    {%endfor%}
+</table>
+</body>
+</html>

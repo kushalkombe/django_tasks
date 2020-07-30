@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for x in obj %}<br>
+{{x.sid}}<br>
+{{x.sname}}<br>
+{{x.smarks}}<br>
+{{x.saddr}}<br>
+<td><button type="submit"><a href="/update/{{x.id}}/">Update</a></button><br></td>
+<td><button type="submit"><a href="/delete/{{x.id}}/">Delete</a></button></td>
+
+{%endfor%}
+<br>
+
+</body>
+</html>

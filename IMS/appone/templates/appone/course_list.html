@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1> Welcome student view</h1>
+    <h3> Available courses Are</h3>
+    {% for x in course_list %}
+     <a href="/course/{{x.id}}/">{{x.cname}}</a><br><br><br>
+    {% endfor %}
+      <button type="button" name="button">Get Study Matrial</button>
+  </body>
+</html>

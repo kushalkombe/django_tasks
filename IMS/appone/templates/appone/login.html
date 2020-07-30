@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>WELCOME TO IMS</h1>
+    <form class="" action="/authlog/" method="post">
+      {% csrf_token %}
+      Username: <input type="text" name="suname"><br><br><br><br><br><br>
+      Password: <input type="password" name="spassword"><br><br><br>
+      <button type="submit" name="button">Login</button>
+      </form><br>
+      <form class="" action="/create/" method="GET">
+        <button type="submit" name="button">Register</button>
+
+      </form>
+
+
+  </body>
+</html>

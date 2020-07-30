@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{%extends "app1/one.html"%}
+{%block title %}bhushan's blog home page{%endblock%}
+
+  {%block content%}
+      <h1>  bhushans post</h1>
+      {%for post in posts%}
+  <h2> <a href="{{post.get_absolute_url}}">  {{post.title}}</a>   </h2>
+  <p id="date">Published on {{post.publish}} by {{post.author|title}}</p>
+  {{post.body|truncatewords:5|linebreaks}}
+      {%endfor%}
+
+   {%include "app1/pagination.html" with page=posts%}
+  {%endblock%}

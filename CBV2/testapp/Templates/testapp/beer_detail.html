@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+{% block body_block %}
+<div class="container">
+  <h1>Beer Details....</h1>
+  <ul>
+    <li>Beer Name:{{beer.name}}</li>
+    <li>Beer Taste:{{beer.taste}}</li>
+    <li>Beer color:{{beer.color}}</li>
+    <li>Beer Price:{{beer.price}} </li>
+  </ul>
+  <a href="/test/beer/" class="btn btn-lg btn success">Beer List</a>
+  URL of this page: {{ request.get_full_path }}
+</div>
+{% endblock %}

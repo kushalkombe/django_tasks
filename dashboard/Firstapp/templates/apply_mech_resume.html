@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>apply resume</title>
+</head>
+<body>
+{%for var in user_resume%}
+<a href="{{var.Resume.url}}">{{var.Name}}</a>
+   {%endfor%}
+</body>
+</html>

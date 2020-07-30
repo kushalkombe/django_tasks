@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h2>login successfull</h2>
+{%if user %}
+<h2>django session for {{a}} </h2>
+<a href="/logout/">Logout</a>
+{%else%}
+<h2>No user</h2>
+{%endif%}
+</body>
+</html>

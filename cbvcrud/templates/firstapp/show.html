@@ -1,0 +1,28 @@
+<html>
+<head></head>
+
+<body>
+
+<table border ="3px" align="center">
+<thead>
+<th>student name</th>
+<th>student rollno</th>
+<th>student address</th>
+<th>update</th>
+{% for stu in obj%}
+<tr>
+<td>{{stu.sname}}</td>
+<td>{{stu.srollno}}</td>
+<td>{{stu.saddr}}</td>
+<td><button type="submit"><a href ='/update/{{stu.id}}/'>update</a></td>
+<td><button type="submit"><a href ='/delete/{{stu.id}}/'>delete</a></td>
+</tr>
+{% endfor %}
+</table>
+
+</body>
+
+
+</html>
+
+

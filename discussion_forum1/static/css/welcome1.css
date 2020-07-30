@@ -1,0 +1,10 @@
+body {
+  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTYruY8hDaFv7RFZwyu54CSZWAderD-Nu-34pDQWZTLTTqtClBV');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.jumbotron {
+  margin-top: 200px;
+  background: rgba(205, 205, 205, 0.5);
+}
+

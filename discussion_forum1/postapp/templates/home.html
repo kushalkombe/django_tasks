@@ -1,0 +1,34 @@
+
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Welcome page</title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/welcome1.css'%}">
+</head>
+
+<body>
+    <div class="container">
+<div class="jumbotron" align="center">
+    <div class="container">
+<h2>Click below to get detailed view of POST</h2><br>
+        {%for i in obj%}
+
+<a href="/postdetails/{{i.id}}/">{{i.title}}</a> <br><br>
+
+<br><br>
+{%endfor%}    </div></div></div>
+    <div class="container">
+<div class="jumbotron" align="center">
+    <div class="container">
+
+    <h2>To add post Click below</h2><br>
+        <button type="submit" ><a href="/addpost/">ADD POST</a></button>
+    </div></div></div>
+</body>
+</html>
+

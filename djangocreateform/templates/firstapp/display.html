@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{%for i in E%}
+{{i.eno}}
+{{i.ename}}
+{{i.esal}}
+{{i.eaddr}}
+{{i.email}}
+
+<button type="submit"><a href="/update/{{i.id}}/">update</a></button>
+<br><br>
+
+{%endfor%}
+
+</body>
+</html>

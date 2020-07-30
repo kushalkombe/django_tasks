@@ -1,0 +1,17 @@
+<html>
+<head></head>
+
+<body>
+<form action="/update/{{obj.id}}/"method="post">
+{% csrf_token %}
+{{studentform.as_p}}
+<button type="submit">update</button>
+
+</form>
+{% comment %} <button type="submit">update</button> {% endcomment %}
+</body>
+
+
+</html>
+
+

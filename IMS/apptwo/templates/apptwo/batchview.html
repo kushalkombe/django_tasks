@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>this is batch views</h1>
+    <table border="2">
+    <thead>
+      <th>batch Name</th>
+      <th>batch max_strength</th>
+      <th>batch available_strength</th>
+      <th>batch date_from</th>
+      <th>batch course</th>
+      <th>ACTION</th>
+    </thead>
+      {% for x in obj %}
+      <tr>
+        <td>{{x.bno}}</td>
+        <td>{{x.max_strength}}</td>
+        <td>{{x.available_strength}}</td>
+        <td>{{x.date_from}}</td>
+        <td>
+          {% for course in x.bcourse.all %}
+          {{course.cname}}
+          {% endfor %}
+        </td>
+        <td>
+          <a href="/bupdate/{{x.pk}}/" class="btn btn-primary btn-lg">update</a>
+          <a href="/bdelete/{{x.pk}}/" class='btn btn-lg btn-danger'>delete</a>
+      </td>
+      </tr>
+      {% endfor %}
+    </table><br><br><br>
+  </body>
+</html>

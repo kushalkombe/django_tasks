@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load crispy_forms_tags %}
+<head>
+    <meta charset="UTF-8">
+    <title>Update IT jobs</title>
+    {% load static %}
+    {% load crispy_forms_tags %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+     <link rel="stylesheet" href="{% static 'css/update.css'%}">
+</head>
+<style>
+    h2 {
+  color:#ff9900;
+  align="center"
+}
+</style>
+<body align="center">
+<div class="container">
+    <div class="container">
+<div class="jumbotron" align="left">
+    <div class="container">
+        <h2>NEW JOB UPDATE HERE !!!</h2><br>
+<form action="/firstapp/it_update/{{obj.id}}/" method="POST">
+{% csrf_token %}
+    {{itforms|crispy}}
+    <br>
+    <button type="submit" class="btn btn-warning">Update</button>
+</form>
+    </div>
+    </div>
+    </div>
+    </div>
+</body>
+</html>

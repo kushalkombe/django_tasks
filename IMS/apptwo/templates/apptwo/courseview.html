@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>This is course View</h1>
+    <table border="2">
+    <thead>
+      <th>course Name</th>
+      <th>course duration</th>
+      <th>course Fees</th>
+      <th>Actions</th>
+    </thead>
+      {% for x in obj %}
+      <tr>
+        <td>{{x.cname}}</td>
+        <td>{{x.duration}}</td>
+        <td>{{x.fees}}</td>
+        <td>
+          <a href="/cupdate/{{x.pk}}/" class="btn btn-primary btn-lg">update</a>
+          <a href="/cdelete/{{x.pk}}/" class='btn btn-lg btn-danger'>delete</a>
+      </td>
+      </tr>
+      {% endfor %}
+    </table><br><br><br>
+  </body>
+</html>

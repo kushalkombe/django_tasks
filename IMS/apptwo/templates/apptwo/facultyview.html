@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>this is view for faculty</h1>
+    <table border="2">
+    <thead>
+      <th>faculty Name</th>
+      <th>faculty number</th>
+      <th>faculty mail</th>
+      <th>faculty course</th>
+      <th>ACTION</th>
+    </thead>
+      {% for x in obj %}
+      <tr>
+        <td>{{x.fname}}</td>
+        <td>{{x.fnumber}}</td>
+        <td>{{x.fmail}}</td>
+
+        <td>
+          {% for course in x.fcourse.all %}
+          {{course.cname}}
+          {% endfor %}
+        </td>
+        <td>
+          <a href="/fupdate/{{x.pk}}/" class="btn btn-primary btn-lg">update</a>
+          <a href="/fdelete/{{x.pk}}/" class='btn btn-lg btn-danger'>delete</a>
+      </td>
+      </tr>
+      {% endfor %}
+    </table><br><br><br
+  </body>
+</html>

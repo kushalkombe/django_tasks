@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{%block body %}
+
+{%if user.is_authenticated %}
+{{user.username}}<br><br>
+<a href="/logut/">log-out</a>
+{%else%}
+please <a href="/login/">log-in</a>
+{%endif%}
+{%endblock%}

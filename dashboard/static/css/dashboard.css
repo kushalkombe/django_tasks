@@ -1,0 +1,20 @@
+
+body {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSq-at_3B76qIRcsh20TiqikKW20zKedYGqDbbyyYEWQsIhvJx1');
+  background-repeat: no-repeat, repeat;
+  background-size:cover;
+}
+.jumbotron{
+  background-image: linear-gradient(120deg,#55efc4,#00cec9,#74b9ff,#6c5ce7);
+  padding: 100px 80px;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+   background: rgba(205, 205, 205, 0.5);
+
+}
+h1 {
+  color: #ff6600;
+}
