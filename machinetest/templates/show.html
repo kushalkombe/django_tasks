@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h3>
+<form>
+    <table border="2px" align="centre">
+        <thead>
+        <th>product_name</th>
+        <th>category</th>
+        <th>tags</th>
+        <th>image</th>
+        <th>description</th>
+        <th>update</th>
+        <th>delete<th>
+
+    {% for prod in obj %}
+        <tr>
+            <td>{{prod.product_name}}</td>
+            <td>{{prod.category}}</td>
+            <td>{{prod.tags}}</td>
+            <td><img src="{{ prod.image.url }}" alt="{{ prod.product_name }}"></td>
+            <td>{{prod.description}}</td>
+            <td><a href ="/prod_update/{{prod.id}}/">update</a></td>
+            <td><a href ="/prod_delete/{{prod.id}}/">delete</a></td>
+        </tr>
+        {% endfor %}<br><br><br>
+</form>
+    <br>
+    <br>
+<h2><a href="/prod_add/">click here to add Products </a></h2>
+</body>
+</html>
